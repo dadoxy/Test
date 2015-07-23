@@ -72,10 +72,14 @@ public class Museum implements Searchable {
 		int counter = 0;
 		for (int i = 0; i < exponats.size(); i++) {
 			if (exponats.get(i).name == s || exponats.get(i).description == s
-					|| exponats.get(i).getID().equals(s)
-					|| employees.get(i).name == s
-					|| employees.get(i).surname == s
-					|| employees.get(i).getAge().equals(s) ) {
+					|| exponats.get(i).getID().equals(s)) {
+				counter++;
+			}
+
+		}
+		for (int i = 0; i < employees.size(); i++) {
+			if (employees.get(i).name == s || employees.get(i).surname == s
+					|| employees.get(i).getAge().equals(s)) {
 				counter++;
 			}
 		}
